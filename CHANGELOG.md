@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 0.1.0-alpha.2 — 2026-07-15
+
+- Publish the first npm distribution under the `next` tag with explicit repository, homepage, issue tracker, registry, and public-access metadata.
+- Document project-local and global npm installation while keeping the prerelease status explicit.
+
+## 0.1.0-alpha.1 — 2026-07-15
+
 - Add a Google Sheets adapter with explicit service-account/Shared Drive and authorized-user/personal Drive credential paths, native XLSX import, a reversible edit trigger, two-read formula/effective-value stabilization, observable structure normalization, and mandatory permanent cleanup.
 - Limit Google authorization to the recommended, non-sensitive `drive.file` scope; no account-wide spreadsheet-read permission or ambient browser state is used at runtime.
 - Add pairwise engine comparisons to the normalized JSON, terminal report, HTML report, fingerprint, and falsification scorecard.
@@ -11,8 +18,6 @@
 - Expand the synthetic CC0 corpus to 68 files and prospectively freeze a third proof round covering workbook metadata, print settings, views, notes, calculation mode, and formula compatibility.
 - Pass the unchanged dossier technical gate: 20/20 known-bad detections, 0/20 known-good false positives, 20/20 stable repeats, 7/5 package-well-formed independent-engine divergences, 1/1 public silent-value proof, and zero remote cleanup failures.
 - Preserve GitHub job summaries on expected SheetParity failures while returning the original failing exit code.
-
-## 0.1.0-alpha.1 — 2026-07-15
 
 - Always-on static XLSX package inspection.
 - Isolated LibreOffice adapter with explicit `calculateAll()` and stable-version capture.

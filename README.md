@@ -29,22 +29,31 @@ That workbook is a valid OOXML ZIP package. Its formula cache says `999`; LibreO
 
 Excel Web, OnlyOffice, and desktop Excel are **adapter boundaries, not implemented engines**. Google Sheets is implemented and live-scored, but remains opt-in and credential-gated for users. The prospectively frozen third falsification round passed every unchanged technical threshold: 20/20 known-bad detections, 0/20 known-good false positives, 20/20 stable repeats, 7 qualifying package-well-formed LibreOffice-versus-Google divergences against a requirement of 5, one independently reproduced public silent-value failure, and zero remote cleanup failures. SheetParity never calls Excel Web “Excel” and never treats a validator as a spreadsheet engine.
 
-## Install and run locally
+## Install
 
 Requires Node.js 20+ and a stable LibreOffice installation.
 
+Project-local install from npm:
+
 ```bash
-npm install
-node bin/sheetparity.js test fixtures/corpus/good-01-basic-arithmetic.xlsx \
+npm install --save-dev sheetparity@next
+npx sheetparity test report.xlsx \
   --matrix libreoffice \
   --json result.json \
   --html report.html
 ```
 
+Or install the prerelease CLI globally:
+
+```bash
+npm install --global sheetparity@next
+sheetparity test report.xlsx --matrix libreoffice
+```
+
 If `soffice` is not on `PATH`, pass it explicitly:
 
 ```bash
-node bin/sheetparity.js test report.xlsx \
+sheetparity test report.xlsx \
   --matrix libreoffice \
   --soffice /path/to/soffice
 ```
@@ -83,11 +92,11 @@ Exit codes are CI-friendly:
 
 ## GitHub Action
 
-After the repository has a public owner and `v0.1.0-alpha.1` tag:
+Pin the prerelease Action tag:
 
 ```yaml
 - name: Test generated XLSX
-  uses: Atomics-hub/sheetparity@v0.1.0-alpha.1
+  uses: Atomics-hub/sheetparity@v0.1.0-alpha.2
   with:
     file: reports/quarterly-report.xlsx
     matrix: libreoffice

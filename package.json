@@ -1,7 +1,20 @@
 {
   "name": "sheetparity",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "CI for generated XLSX files: static package evidence plus real spreadsheet-engine round trips.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atomics-hub/sheetparity.git"
+  },
+  "homepage": "https://github.com/Atomics-hub/sheetparity#readme",
+  "bugs": {
+    "url": "https://github.com/Atomics-hub/sheetparity/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "next"
+  },
   "type": "module",
   "bin": {
     "sheetparity": "./bin/sheetparity.js"

@@ -42,6 +42,14 @@ test("pinned engine installer and package boundaries remain explicit", async () 
   const packageJson = JSON.parse(await fs.readFile(path.join(root, "package.json"), "utf8"));
   assert.ok(packageJson.files.includes("docs"));
   assert.ok(packageJson.files.includes("scripts/google-oauth-authorize.mjs"));
+  assert.equal(packageJson.repository.url, "git+https://github.com/Atomics-hub/sheetparity.git");
+  assert.equal(packageJson.homepage, "https://github.com/Atomics-hub/sheetparity#readme");
+  assert.equal(packageJson.bugs.url, "https://github.com/Atomics-hub/sheetparity/issues");
+  assert.deepEqual(packageJson.publishConfig, {
+    access: "public",
+    registry: "https://registry.npmjs.org/",
+    tag: "next"
+  });
   const ignore = await fs.readFile(path.join(root, ".gitignore"), "utf8");
   for (const pattern of ["*.credentials.json", "client_secret*.json", "*.google.env"]) assert.match(ignore, new RegExp(pattern.replaceAll("*", ".*")));
 });

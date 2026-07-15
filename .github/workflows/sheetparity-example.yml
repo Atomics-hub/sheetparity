@@ -18,7 +18,7 @@ jobs:
       - name: Generate workbook
         run: npm install && npm run generate:report
       - name: Test generated XLSX
-        uses: Atomics-hub/sheetparity@v0.1.0-alpha.1
+        uses: Atomics-hub/sheetparity@v0.1.0-alpha.2
         with:
           file: reports/quarterly-report.xlsx
           matrix: libreoffice

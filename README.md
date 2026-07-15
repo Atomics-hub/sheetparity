@@ -1,6 +1,13 @@
 # SheetParity
 
+[![npm version](https://img.shields.io/npm/v/sheetparity?label=npm)](https://www.npmjs.com/package/sheetparity)
+[![npm downloads](https://img.shields.io/npm/dm/sheetparity)](https://www.npmjs.com/package/sheetparity)
+[![CI](https://github.com/Atomics-hub/sheetparity/actions/workflows/ci.yml/badge.svg)](https://github.com/Atomics-hub/sheetparity/actions/workflows/ci.yml)
+[![MIT license](https://img.shields.io/npm/l/sheetparity)](LICENSE)
+
 **CI for generated XLSX files.** SheetParity opens a workbook in named spreadsheet engines, forces recalculation where the engine supports it, and reports material formula, value, error, and structural differences before a customer finds them.
+
+Use SheetParity in GitHub Actions or local CI to test generated Excel-compatible `.xlsx` workbooks, catch stale formula caches and unsupported formulas, and detect lost names, protection, page setup, headers, footers, and other OOXML structure. The implemented engine matrix is stable LibreOffice plus opt-in Google Sheets; SheetParity does not mislabel either one as desktop Excel validation.
 
 ```text
 $ sheetparity test report.xlsx --matrix libreoffice
@@ -96,7 +103,7 @@ Pin the prerelease Action tag:
 
 ```yaml
 - name: Test generated XLSX
-  uses: Atomics-hub/sheetparity@v0.1.0-alpha.2
+  uses: Atomics-hub/sheetparity@v0.1.0-alpha.3
   with:
     file: reports/quarterly-report.xlsx
     matrix: libreoffice

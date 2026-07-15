@@ -2,7 +2,7 @@
 
 Canonical public target: `https://github.com/Atomics-hub/sheetparity`.
 
-The initial GitHub launch covered the repository, CI, private vulnerability reporting, and `v0.1.0-alpha.1` release. The approved npm follow-up publishes `0.1.0-alpha.2` under the `next` dist-tag. Hosted deployment, spending, new credentials, and outreach remain separate actions.
+The initial GitHub launch covered the repository, CI, private vulnerability reporting, and `v0.1.0-alpha.1` release. The npm distribution began with `0.1.0-alpha.2`; the discoverability pass publishes `0.1.0-alpha.3` with expanded search metadata and README links. Hosted deployment, spending, new credentials, and outreach remain separate actions.
 
 ## Repository metadata
 
@@ -12,8 +12,8 @@ The initial GitHub launch covered the repository, CI, private vulnerability repo
 - Description: `CI for generated XLSX files—open, recalculate, and diff workbooks in real spreadsheet engines before customers do.`
 - Topics: `xlsx`, `spreadsheet`, `ooxml`, `ci`, `testing`, `libreoffice`, `google-sheets`, `github-actions`, `document-generation`
 - License: MIT for code; CC0-1.0 for fixture bytes
-- Current prerelease: `v0.1.0-alpha.2`
-- Package publication: public npm package `sheetparity@0.1.0-alpha.2` under the `next` dist-tag
+- Current prerelease: `v0.1.0-alpha.3`
+- Package publication: public npm package `sheetparity@0.1.0-alpha.3` under the `next` dist-tag
 
 ## Included launch surfaces
 
@@ -31,17 +31,17 @@ The initial GitHub launch covered the repository, CI, private vulnerability repo
 
 ## npm follow-up release title
 
-`SheetParity v0.1.0-alpha.2 — install SheetParity from npm`
+`SheetParity v0.1.0-alpha.3 — easier to find, same honest scope`
 
 ## npm follow-up release notes
 
-> SheetParity is now installable from npm with `npm install --save-dev sheetparity@next` or `npm install --global sheetparity@next`. This prerelease contains the same tested XLSX engine-parity implementation and prospective 7/5 falsification proof, with explicit npm repository, issue, license, and public-access metadata. Excel Web, OnlyOffice, desktop Excel, native render comparison, and Excel repair-prompt proof remain unavailable or adapter-only.
+> SheetParity remains installable from npm with `npm install --save-dev sheetparity@next` or `npm install --global sheetparity@next`. This metadata-only prerelease adds search terms and README links for generated XLSX validation, workbook testing, compatibility testing, formula recalculation, and GitHub Actions. The tested implementation, prospective 7/5 falsification proof, and honest engine boundaries are unchanged.
 
 ## Publication decision
 
 Publish the repository as an explicitly scoped alpha. The unchanged technical gate passed in a prospective round. Keep the CLI, local runner, result contract, materiality policy, and public fixture corpus open; reserve managed engine matrices, private fixtures, retained baselines, PR checks, team policies, audit history, zero-retention controls, and user-owned runners for the hosted path.
 
-Do not market the current matrix as Excel validation or universal workbook compatibility. npm publication is approved for `0.1.0-alpha.2`; hosted deployment, spending, and outreach remain outside this follow-up.
+Do not market the current matrix as desktop Excel validation or universal workbook compatibility. npm publication is approved through `0.1.0-alpha.3`; hosted deployment, spending, and outreach remain outside this follow-up.
 
 ## Initial launch sequence
 
@@ -51,5 +51,6 @@ Do not market the current matrix as Excel validation or universal workbook compa
 4. Verify `test` and `engine-smoke` on the public runner.
 5. Enable private vulnerability reporting and branch protection requiring the verified checks.
 6. Create `v0.1.0-alpha.1` and its GitHub release.
-7. Prepare `v0.1.0-alpha.2`, verify public CI, publish `sheetparity@0.1.0-alpha.2` under `next`, and verify a clean registry install.
-8. Stop before hosted deployment, spending, new credentials, or outreach unless separately approved.
+7. Prepare `v0.1.0-alpha.2`, verify public CI, publish it to npm, and verify a clean registry install.
+8. Publish the metadata-only `v0.1.0-alpha.3` discoverability pass after the same package and CI checks.
+9. Stop before hosted deployment, spending, new credentials, or outreach unless separately approved.

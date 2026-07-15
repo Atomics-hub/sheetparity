@@ -50,6 +50,19 @@ test("pinned engine installer and package boundaries remain explicit", async () 
     registry: "https://registry.npmjs.org/",
     tag: "next"
   });
+  for (const keyword of [
+    "xlsx",
+    "excel",
+    "workbook",
+    "xlsx-validation",
+    "spreadsheet-testing",
+    "compatibility-testing",
+    "github-actions"
+  ]) assert.ok(packageJson.keywords.includes(keyword), keyword);
+  const readme = await fs.readFile(path.join(root, "README.md"), "utf8");
+  assert.match(readme, /npm install --save-dev sheetparity@next/);
+  assert.match(readme, /www\.npmjs\.com\/package\/sheetparity/);
+  assert.match(readme, /actions\/workflows\/ci\.yml\/badge\.svg/);
   const ignore = await fs.readFile(path.join(root, ".gitignore"), "utf8");
   for (const pattern of ["*.credentials.json", "client_secret*.json", "*.google.env"]) assert.match(ignore, new RegExp(pattern.replaceAll("*", ".*")));
 });

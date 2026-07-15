@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 0.1.0-alpha.3 — 2026-07-15
+
+- Expand npm and GitHub search metadata around XLSX validation, workbook testing, compatibility testing, regression testing, and GitHub Actions.
+- Add npm, download, CI, and license badges plus an explicit capability-and-scope summary near the top of the README.
+
 ## 0.1.0-alpha.2 — 2026-07-15
 
 - Publish the first npm distribution under the `next` tag with explicit repository, homepage, issue tracker, registry, and public-access metadata.

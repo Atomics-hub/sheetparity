@@ -1,7 +1,7 @@
 {
   "name": "sheetparity",
-  "version": "0.1.0-alpha.2",
-  "description": "CI for generated XLSX files: static package evidence plus real spreadsheet-engine round trips.",
+  "version": "0.1.0-alpha.3",
+  "description": "CI for generated XLSX workbooks: validate OOXML, recalculate formulas, and compare LibreOffice with opt-in Google Sheets.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Atomics-hub/sheetparity.git"
@@ -46,11 +46,20 @@
   },
   "keywords": [
     "xlsx",
+    "excel",
+    "workbook",
     "spreadsheet",
+    "xlsx-validation",
+    "spreadsheet-testing",
+    "workbook-testing",
+    "compatibility-testing",
+    "regression-testing",
+    "github-actions",
     "libreoffice",
     "google-sheets",
     "ci",
     "testing",
+    "validation",
     "ooxml"
   ],
   "license": "MIT",

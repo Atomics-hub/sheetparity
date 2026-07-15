@@ -1,0 +1,58 @@
+name: SheetParity XLSX test
+description: Run static OOXML checks plus named LibreOffice and credentialed Google Sheets engine adapters against one generated XLSX file.
+branding:
+  icon: check-square
+  color: green
+inputs:
+  file:
+    description: Path to the XLSX file to test.
+    required: true
+  matrix:
+    description: Comma-separated engine adapter ids.
+    required: false
+    default: libreoffice
+  json:
+    description: JSON result path.
+    required: false
+    default: sheetparity-result.json
+  html:
+    description: HTML report path.
+    required: false
+    default: sheetparity-report.html
+outputs:
+  json:
+    description: JSON result path.
+    value: ${{ inputs.json }}
+  html:
+    description: HTML report path.
+    value: ${{ inputs.html }}
+runs:
+  using: composite
+  steps:
+    - name: Install SheetParity dependencies
+      shell: bash
+      run: npm install --omit=dev --ignore-scripts --prefix "$GITHUB_ACTION_PATH"
+    - name: Install pinned LibreOffice engine
+      id: libreoffice
+      if: contains(inputs.matrix, 'libreoffice')
+      shell: bash
+      run: bash "$GITHUB_ACTION_PATH/scripts/install-libreoffice-linux.sh"
+    - name: Test workbook
+      shell: bash
+      env:
+        SHEETPARITY_SOFFICE: ${{ steps.libreoffice.outputs.soffice }}
+        SHEETPARITY_INPUT_FILE: ${{ inputs.file }}
+        SHEETPARITY_INPUT_MATRIX: ${{ inputs.matrix }}
+        SHEETPARITY_JSON_OUTPUT: ${{ inputs.json }}
+        SHEETPARITY_HTML_OUTPUT: ${{ inputs.html }}
+      run: |
+        set +e
+        node "$GITHUB_ACTION_PATH/bin/sheetparity.js" test "$SHEETPARITY_INPUT_FILE" --matrix "$SHEETPARITY_INPUT_MATRIX" --json "$SHEETPARITY_JSON_OUTPUT" --html "$SHEETPARITY_HTML_OUTPUT" | tee sheetparity-summary.txt
+        status=${PIPESTATUS[0]}
+        set -e
+        {
+          echo '```text'
+          cat sheetparity-summary.txt
+          echo '```'
+        } >> "$GITHUB_STEP_SUMMARY"
+        exit "$status"

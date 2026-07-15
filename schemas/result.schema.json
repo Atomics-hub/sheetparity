@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sheetparity.dev/schemas/result-1.0.0.json",
+  "title": "SheetParity normalized result",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "source", "requestedMatrix", "engines", "comparisons", "engineComparisons", "policy", "summary", "fingerprint"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "fingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "requestedMatrix": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "source": { "$ref": "#/$defs/source" },
+    "engines": { "type": "array", "items": { "$ref": "#/$defs/engine" } },
+    "comparisons": { "type": "array", "items": { "$ref": "#/$defs/comparison" } },
+    "engineComparisons": { "type": "array", "items": { "$ref": "#/$defs/engineComparison" } },
+    "policy": { "$ref": "#/$defs/policy" },
+    "summary": { "$ref": "#/$defs/summary" }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["fileName", "sizeBytes", "sha256", "package", "workbook", "diagnostics"],
+      "properties": {
+        "fileName": { "type": "string" },
+        "sizeBytes": { "type": "integer", "minimum": 0 },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "package": { "$ref": "#/$defs/package" },
+        "workbook": { "$ref": "#/$defs/workbook" },
+        "diagnostics": { "$ref": "#/$defs/diagnostics" }
+      },
+      "additionalProperties": false
+    },
+    "engine": {
+      "type": "object",
+      "required": ["id", "label", "kind", "version", "status", "environment", "open", "proofLayers", "workbook", "diagnostics"],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "kind": { "enum": ["local-engine", "credentialed-service", "byo-runner"] },
+        "version": { "type": ["string", "null"] },
+        "status": { "enum": ["available", "unavailable", "error"] },
+        "durationMs": { "type": "integer", "minimum": 0 },
+        "environment": {
+          "type": "object",
+          "required": ["locale", "timezone", "fontPack", "calculationMode"],
+          "properties": {
+            "executable": { "type": "string" },
+            "releaseChannel": { "enum": ["stable", "release-candidate", "development", "unknown"] },
+            "locale": { "type": ["string", "null"] },
+            "timezone": { "type": ["string", "null"] },
+            "fontPack": { "type": ["string", "null"] },
+            "calculationMode": { "type": ["string", "null"] }
+          },
+          "additionalProperties": true
+        },
+        "open": {
+          "type": "object",
+          "required": ["outcome", "exitCode", "timedOut", "messages"],
+          "properties": {
+            "outcome": { "enum": ["accepted", "rejected", "unavailable"] },
+            "exitCode": { "type": ["integer", "null"] },
+            "timedOut": { "type": "boolean" },
+            "messages": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        },
+        "proofLayers": {
+          "type": "object",
+          "required": ["openImport", "formulas", "cachedValues", "recalculatedValues", "namedObjects", "renders"],
+          "properties": {
+            "openImport": { "type": "string" },
+            "formulas": { "type": "string" },
+            "cachedValues": { "type": "string" },
+            "recalculatedValues": { "type": "string" },
+            "namedObjects": { "type": "string" },
+            "renders": { "type": "string" }
+          },
+          "additionalProperties": { "type": "string" }
+        },
+        "package": { "$ref": "#/$defs/package" },
+        "workbook": { "$ref": "#/$defs/workbook" },
+        "diagnostics": { "$ref": "#/$defs/diagnostics" }
+      },
+      "additionalProperties": true
+    },
+    "comparison": {
+      "type": "object",
+      "required": ["engineId", "engineVersion", "status", "differenceCount", "materialDifferenceCount", "differences"],
+      "properties": {
+        "engineId": { "type": "string" },
+        "engineVersion": { "type": ["string", "null"] },
+        "status": { "enum": ["pass", "fail"] },
+        "differenceCount": { "type": "integer", "minimum": 0 },
+        "materialDifferenceCount": { "type": "integer", "minimum": 0 },
+        "differences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["kind", "material", "reason"],
+            "properties": {
+              "kind": { "enum": ["cell_presence", "formula", "value", "error", "structure"] },
+              "location": { "type": "string" },
+              "objectType": { "type": "string" },
+              "name": { "type": ["string", "null"] },
+              "before": {},
+              "after": {},
+              "beforeType": { "type": "string" },
+              "afterType": { "type": "string" },
+              "material": { "type": "boolean" },
+              "reason": { "type": "string" }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "engineComparison": {
+      "type": "object",
+      "required": ["leftEngineId", "leftEngineVersion", "rightEngineId", "rightEngineVersion", "status", "differenceCount", "materialDifferenceCount", "differences"],
+      "properties": {
+        "leftEngineId": { "type": "string" },
+        "leftEngineVersion": { "type": ["string", "null"] },
+        "rightEngineId": { "type": "string" },
+        "rightEngineVersion": { "type": ["string", "null"] },
+        "status": { "enum": ["pass", "fail"] },
+        "differenceCount": { "type": "integer", "minimum": 0 },
+        "materialDifferenceCount": { "type": "integer", "minimum": 0 },
+        "differences": { "$ref": "#/$defs/comparison/properties/differences" }
+      },
+      "additionalProperties": false
+    },
+    "package": {
+      "type": "object",
+      "properties": {
+        "validZip": { "type": "boolean" },
+        "requiredPartsPresent": { "type": "boolean" },
+        "partCount": { "type": "integer", "minimum": 0 },
+        "features": {
+          "type": "object",
+          "properties": {
+            "macros": { "type": "boolean" },
+            "externalLinks": { "type": "integer", "minimum": 0 },
+            "images": { "type": "integer", "minimum": 0 },
+            "charts": { "type": "integer", "minimum": 0 },
+            "tables": { "type": "integer", "minimum": 0 },
+            "pivotTables": { "type": "integer", "minimum": 0 },
+            "calculationMode": { "type": ["string", "null"] },
+            "forceFullCalculation": { "type": ["string", "null"] },
+            "fullCalculationOnLoad": { "type": ["string", "null"] }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "workbook": {
+      "type": "object",
+      "required": ["sheets", "namedObjects"],
+      "properties": {
+        "sheets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "state", "part", "features", "cells"],
+            "properties": {
+              "name": { "type": ["string", "null"] },
+              "state": { "type": "string" },
+              "part": { "type": ["string", "null"] },
+              "features": { "type": "object" },
+              "cells": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "required": ["formula", "cachedValue", "valueType", "styleIndex", "volatile", "external"],
+                  "properties": {
+                    "formula": { "type": ["string", "null"] },
+                    "cachedValue": {},
+                    "valueType": { "type": "string" },
+                    "styleIndex": { "type": ["integer", "null"] },
+                    "volatile": { "type": "boolean" },
+                    "external": { "type": "boolean" }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "namedObjects": { "type": "array", "items": { "type": "object" } }
+      },
+      "additionalProperties": false
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "severity", "material", "message"],
+        "properties": {
+          "code": { "type": "string" },
+          "severity": { "enum": ["info", "warning", "error"] },
+          "material": { "type": "boolean" },
+          "message": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "policy": {
+      "type": "object",
+      "required": ["numericAbsoluteTolerance", "numericRelativeTolerance", "ignoreVolatileFormulaValues", "ignoreExternalFormulaValues", "structuralLossIsMaterial", "formulaChangeIsMaterial", "errorChangeIsMaterial"],
+      "properties": {
+        "numericAbsoluteTolerance": { "type": "number", "minimum": 0 },
+        "numericRelativeTolerance": { "type": "number", "minimum": 0 },
+        "ignoreVolatileFormulaValues": { "type": "boolean" },
+        "ignoreExternalFormulaValues": { "type": "boolean" },
+        "structuralLossIsMaterial": { "type": "boolean" },
+        "formulaChangeIsMaterial": { "type": "boolean" },
+        "errorChangeIsMaterial": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": ["status", "sourceMaterialErrors", "requestedEngineCount", "availableEngineCount", "unavailableEngineCount", "engineErrorCount", "materialDifferenceCount", "engineMaterialDifferenceCount"],
+      "properties": {
+        "status": { "enum": ["pass", "fail", "incomplete"] },
+        "sourceMaterialErrors": { "type": "integer", "minimum": 0 },
+        "requestedEngineCount": { "type": "integer", "minimum": 0 },
+        "availableEngineCount": { "type": "integer", "minimum": 0 },
+        "unavailableEngineCount": { "type": "integer", "minimum": 0 },
+        "engineErrorCount": { "type": "integer", "minimum": 0 },
+        "materialDifferenceCount": { "type": "integer", "minimum": 0 },
+        "engineMaterialDifferenceCount": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

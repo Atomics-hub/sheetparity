@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "round": "followup-2026-07-15-round-2",
+  "recordedAt": "2026-07-15T19:48:00Z",
+  "phase": "after_targeted_prospective_execution_before_full_matrix",
+  "issue": "LibreOffice emits empty oddHeader and oddFooter elements during XLSX round trips. The structural counter treated element presence as header/footer content, creating false pairwise material differences against Google Sheets exports that omit the empty elements.",
+  "rawProof": "<headerFooter differentFirst=\"false\" differentOddEven=\"false\"><oddHeader></oddHeader><oddFooter></oddFooter></headerFooter>",
+  "correction": "Count only non-empty trimmed header/footer text in odd, even, and first header/footer elements.",
+  "direction": "narrows_detection_and_removes_false_positives",
+  "populationChanged": false,
+  "thresholdsChanged": false,
+  "manifestChanged": false,
+  "manifestSha256": "40a4d19105f7c9e3cabc8f27ce53229f2dc014d4b747471aaff5f454f941fa92",
+  "decisionRule": "Rerun the same six fixtures and the complete frozen population. Do not count the pre-correction results toward any gate."
+}

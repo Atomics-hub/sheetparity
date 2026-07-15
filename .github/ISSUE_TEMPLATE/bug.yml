@@ -1,0 +1,44 @@
+name: CLI or adapter bug
+description: Report incorrect SheetParity behavior with reproducible evidence.
+title: "[bug] "
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: SheetParity version or commit
+    validations:
+      required: true
+  - type: input
+    id: engine
+    attributes:
+      label: Engine and exact version
+      placeholder: LibreOffice 26.2.4.2
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and bounded output
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: safe
+    attributes:
+      label: Data safety
+      options:
+        - label: I removed private workbook data and credentials from this report.
+          required: true

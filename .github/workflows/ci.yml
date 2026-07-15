@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+      - run: npm install --ignore-scripts
+      - run: npm test
+      - run: npm run lint
+
+  engine-smoke:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+      - run: npm install --ignore-scripts
+      - id: libreoffice
+        run: bash scripts/install-libreoffice-linux.sh
+      - name: Known-good control
+        env:
+          SHEETPARITY_SOFFICE: ${{ steps.libreoffice.outputs.soffice }}
+        run: node bin/sheetparity.js test fixtures/corpus/good-01-basic-arithmetic.xlsx --matrix libreoffice --json outputs/ci-good.json
+      - name: Known-bad control
+        env:
+          SHEETPARITY_SOFFICE: ${{ steps.libreoffice.outputs.soffice }}
+        run: |
+          if node bin/sheetparity.js test fixtures/corpus/bad-15-stale-cache-d4.xlsx --matrix libreoffice --json outputs/ci-bad.json; then
+            echo 'Known-bad fixture unexpectedly passed' >&2
+            exit 1
+          fi

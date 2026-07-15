@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "round": "followup-2026-07-15-round-2",
+  "frozenBeforeEngineExecution": true,
+  "manifestSha256": "40a4d19105f7c9e3cabc8f27ce53229f2dc014d4b747471aaff5f454f941fa92",
+  "population": {
+    "knownGood": 20,
+    "knownBad": 20,
+    "exploratory": 16,
+    "repeats": 20
+  },
+  "thresholds": {
+    "knownBadDetected": 16,
+    "knownGoodFalsePositiveRate": "<10%",
+    "repeatedRunStability": ">=19/20",
+    "packageValidLocalSemanticDivergences": 5,
+    "independentRealEngineDivergences": 5,
+    "publicSilentValueFixture": 1,
+    "remoteCleanupFailures": 0
+  },
+  "followupFixtures": [
+    {
+      "id": "explore-11-exceljs-1325-header-footer",
+      "sha256": "7bde5609083f959adcc44c3a11dbbd211d542aaf726a712ffcdd162138c8cb81",
+      "provenance": "https://github.com/exceljs/exceljs/issues/1325"
+    },
+    {
+      "id": "explore-12-exceljs-685-sheet-protection",
+      "sha256": "df69b14322d2544a1123d27ec446391766d0493cd17626868f8c1def213b3d45",
+      "provenance": "https://github.com/exceljs/exceljs/issues/685"
+    },
+    {
+      "id": "explore-13-exceljs-2069-long-data-validation",
+      "sha256": "e99db0261d6720bd7d2b5d0bbdcd73f8cf0508b78c1ddf38671f846e4f1af68f",
+      "provenance": "https://github.com/exceljs/exceljs/discussions/2069"
+    },
+    {
+      "id": "explore-14-synthetic-page-breaks",
+      "sha256": "629c436115a1a3d03b8e1e420a374bea77bbe84248d9100d983b8c679bd569a7",
+      "provenance": "synthetic: authored for SheetParity"
+    },
+    {
+      "id": "explore-15-synthetic-ignored-errors",
+      "sha256": "68115ed793636f1d00ae6fe6c6813a4e02817ed1add01e34efc5a9a33988caa8",
+      "provenance": "synthetic: authored for SheetParity"
+    },
+    {
+      "id": "explore-16-synthetic-row-outline",
+      "sha256": "b205e2bf88d00a624fc2c206a06dd23fa612b19263d5f18b58bb55a71e4cdcc3",
+      "provenance": "synthetic: authored for SheetParity"
+    }
+  ],
+  "decisionRule": "Pass only if every frozen threshold passes; otherwise keep private without changing the population or threshold."
+}

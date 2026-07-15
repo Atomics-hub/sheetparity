@@ -1,0 +1,4249 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15T21:01:08.158Z",
+  "protocol": {
+    "manifestSha256": "f4b01e5fc08a0345e050b21ae921986becb1d69155367ef92c6f8f964f1fbd2b",
+    "requiredManifestSha256": "f4b01e5fc08a0345e050b21ae921986becb1d69155367ef92c6f8f964f1fbd2b",
+    "fixtureCount": 68
+  },
+  "engine": {
+    "versions": [
+      "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc"
+    ],
+    "releaseChannels": [
+      "stable"
+    ],
+    "requested": "libreoffice,google-sheets",
+    "staticAnalysis": "always-on",
+    "matrix": {
+      "google-sheets": {
+        "versions": [],
+        "releaseChannels": [
+          "unknown"
+        ],
+        "locales": [
+          "en_US"
+        ],
+        "timezones": [
+          "America/Los_Angeles"
+        ],
+        "endpoints": [
+          "Google Sheets API v4 / Drive API v3"
+        ],
+        "availableRuns": 81,
+        "errorRuns": 7,
+        "unavailableRuns": 0,
+        "cleanupFailures": 0
+      },
+      "libreoffice": {
+        "versions": [
+          "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc"
+        ],
+        "releaseChannels": [
+          "stable"
+        ],
+        "locales": [
+          "C"
+        ],
+        "timezones": [
+          "UTC"
+        ],
+        "endpoints": [],
+        "availableRuns": 83,
+        "errorRuns": 5,
+        "unavailableRuns": 0,
+        "cleanupFailures": 0
+      }
+    }
+  },
+  "population": {
+    "knownGood": 20,
+    "knownBad": 20,
+    "exploratory": 28,
+    "repeats": 20
+  },
+  "thresholds": {
+    "knownBadDetected": {
+      "required": 16,
+      "observed": 20,
+      "pass": true
+    },
+    "knownGoodFalsePositiveRate": {
+      "required": "<10%",
+      "observed": 0,
+      "pass": true
+    },
+    "repeatedRunStability": {
+      "required": ">=19/20",
+      "observed": "20/20",
+      "pass": true
+    },
+    "packageValidLocalSemanticDivergences": {
+      "required": 5,
+      "observed": 6,
+      "pass": true,
+      "scope": "source cached value versus one real LibreOffice recalculation"
+    },
+    "independentRealEngineDivergences": {
+      "required": 5,
+      "observed": 7,
+      "pass": true,
+      "scope": "fixture-level material disagreement between LibreOffice and Google Sheets"
+    },
+    "publicSilentValueFixture": {
+      "required": 1,
+      "observed": 1,
+      "pass": true,
+      "scope": "public report-derived bytes with an independently verified silent value difference"
+    },
+    "remoteCleanupFailures": {
+      "required": 0,
+      "observed": 0,
+      "pass": true
+    }
+  },
+  "localGatePass": true,
+  "dossierTechnicalGatePass": true,
+  "verdict": "pass",
+  "reason": "All technical falsification thresholds passed.",
+  "runs": [
+    {
+      "id": "bad-01-not-a-zip",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 1,
+      "materialDifferenceCount": 1,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "df7ca222fcdfba8f32a3fa2b75b30ee063277eaef2340659b8312269c9027a6f",
+      "engines": {
+        "libreoffice": {
+          "status": "error",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "rejected",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "rejected",
+      "engineOutcomes": {
+        "libreoffice": "rejected",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 27800
+    },
+    {
+      "id": "bad-02-truncated-zip",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 1,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "40a1a36715ffeb3dcfebfa822b0e90248aa63d4e65ebbb6f9d3bcac5d8906588",
+      "engines": {
+        "libreoffice": {
+          "status": "error",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "rejected",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "error",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "rejected",
+          "locale": null,
+          "timezone": null,
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": null
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "rejected",
+      "engineOutcomes": {
+        "libreoffice": "rejected",
+        "google-sheets": "rejected"
+      },
+      "elapsedMs": 28039
+    },
+    {
+      "id": "bad-03-missing-content-types",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 1,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "8bea0d7a03b65b9c6ae1eabba79bd5392d6d6cb2770352e34587855480163874",
+      "engines": {
+        "libreoffice": {
+          "status": "error",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "rejected",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "rejected",
+      "engineOutcomes": {
+        "libreoffice": "rejected",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 24910
+    },
+    {
+      "id": "bad-04-missing-workbook",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 1,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "54e8c43d193ff247dd362d4436661be413764040eb9eaef17a475d7fdd80add5",
+      "engines": {
+        "libreoffice": {
+          "status": "error",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "rejected",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "error",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "rejected",
+          "locale": null,
+          "timezone": null,
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": null
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "rejected",
+      "engineOutcomes": {
+        "libreoffice": "rejected",
+        "google-sheets": "rejected"
+      },
+      "elapsedMs": 21304
+    },
+    {
+      "id": "bad-05-missing-workbook-rels",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 2,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "917304b60b0478eebf87a1cf0942c6c1f8eea60b224277da58b0b444caa85b21",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "error",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": null,
+          "timezone": null,
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": null
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 18567
+    },
+    {
+      "id": "bad-06-missing-worksheet",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 2,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "1b0a9fae689ec8f3eead215716d1f428f291fb158105b05584a6ac967bd859c7",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "error",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "rejected",
+          "locale": null,
+          "timezone": null,
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": null
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "rejected"
+      },
+      "elapsedMs": 24066
+    },
+    {
+      "id": "bad-07-missing-styles",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 1,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "d606f59d2b50147880f6fed7007e8be9985fcccdf2c8e83d6e93388bf2864131",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 38814
+    },
+    {
+      "id": "bad-08-missing-theme",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 1,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "4f7c1dc788eae0b0ccac0595b763931fbf24467efd3a27b980b44e0c102fe37c",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 27025
+    },
+    {
+      "id": "bad-09-malformed-workbook-xml",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 1,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "7c32e14536587a757449e1c196f42d0d2ac7ae77962de4b86ea93fc5a04ef9d7",
+      "engines": {
+        "libreoffice": {
+          "status": "error",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "rejected",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "error",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "rejected",
+          "locale": null,
+          "timezone": null,
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": null
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "rejected",
+      "engineOutcomes": {
+        "libreoffice": "rejected",
+        "google-sheets": "rejected"
+      },
+      "elapsedMs": 17123
+    },
+    {
+      "id": "bad-10-malformed-worksheet-xml",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 1,
+      "materialDifferenceCount": 25,
+      "libreOfficeMaterialDifferenceCount": 25,
+      "independentMaterialDifferenceCount": 26,
+      "independentDivergence": true,
+      "fingerprint": "913dea3c6463320342286350772daf8eb982f100f93340e4d7f52fde322c57ef",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 42771
+    },
+    {
+      "id": "bad-11-broken-relationship-target",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 2,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "52ca7c2341fcd08b93a1c5441fe04c59f6f55641110ce177795e9b65a99d88f9",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "error",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "rejected",
+          "locale": null,
+          "timezone": null,
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": null
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "rejected"
+      },
+      "elapsedMs": 39422
+    },
+    {
+      "id": "bad-12-missing-sheet-relationship",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 1,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "175b330786f00e6e834fb3c6f693c3268e7d11e1a7457dcfe9204795bc734597",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "error",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": null,
+          "timezone": null,
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": null
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 36517
+    },
+    {
+      "id": "bad-13-invalid-cell-reference",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 1,
+      "materialDifferenceCount": 2,
+      "libreOfficeMaterialDifferenceCount": 1,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "9dec0b5ff4cb48b5057338bf37938a735681c1808f09cb032924d99b8a79855c",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 21192
+    },
+    {
+      "id": "bad-14-duplicate-sheet-name",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 2,
+      "materialDifferenceCount": 2,
+      "libreOfficeMaterialDifferenceCount": 1,
+      "independentMaterialDifferenceCount": 1,
+      "independentDivergence": true,
+      "fingerprint": "f75da03245810ea93c05f68cbf2d452dc1698690e90227a496f170b2a63afd97",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 28619
+    },
+    {
+      "id": "bad-15-stale-cache-d4",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": true,
+      "semanticDivergence": true,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 2,
+      "libreOfficeMaterialDifferenceCount": 1,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "87f579144925eb5877f1e3ed3070b5aa0864e33382955fe82ecf4f1f10cb251f",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 20096
+    },
+    {
+      "id": "bad-16-stale-cache-d5",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": true,
+      "semanticDivergence": true,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 2,
+      "libreOfficeMaterialDifferenceCount": 1,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "c3d24c3319394a59042cd47eff1554b783ff700f63e541fb54c1b2b4cbce1068",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 18543
+    },
+    {
+      "id": "bad-17-stale-cache-d6",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": true,
+      "semanticDivergence": true,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 2,
+      "libreOfficeMaterialDifferenceCount": 1,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "13b7d3c6dcaad1f791914ee5fd30b35fb2eae26a26965ed43398ee2b86945c19",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 18762
+    },
+    {
+      "id": "bad-18-stale-cache-d7",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": true,
+      "semanticDivergence": true,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 2,
+      "libreOfficeMaterialDifferenceCount": 1,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "9b51b697da3e71c0340244384e208a9f15a5e5887f90a629322a429e70f47cfb",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 18026
+    },
+    {
+      "id": "bad-19-stale-cache-g4",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": true,
+      "semanticDivergence": true,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 2,
+      "libreOfficeMaterialDifferenceCount": 1,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "d8165528c86f202bc901e83203b73e330a5dca2040c7d80a7cfb7fa98c924ba8",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 16285
+    },
+    {
+      "id": "bad-20-stale-cache-h4",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": true,
+      "semanticDivergence": true,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 2,
+      "libreOfficeMaterialDifferenceCount": 1,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "ff0fae6d69f79028dad3caad07bcf934af35b7902f244aaacb983f57f64b6e63",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 17600
+    },
+    {
+      "id": "explore-01-exceljs-2778-autofilter",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "aab1f9a41d1817191e3719cf01a558c2c07ce4980b7d8d5f1af05d447e79f033",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 16901
+    },
+    {
+      "id": "explore-02-exceljs-2896-image-anchor",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "78931049f9dd8b91eb6f86807d325be5f9e7042ad5ca4870d3deb6a7bdb888d7",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 23400
+    },
+    {
+      "id": "explore-03-npoi-1801-open-control",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "5caab43f3b3ebe038e517728a06b72dd06fb2543aab08eee7c75a184248acee7",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 17551
+    },
+    {
+      "id": "explore-04-external-link-policy",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "af306099ea86809e994a139d08faf0f48799586a0a0a75f0b26fcb1b0252d1a4",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 17305
+    },
+    {
+      "id": "explore-05-volatile-policy",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "2081c083d35bcc42c48f8b326db36c56ccd11243ff23c041ede2730fd4497964",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 17938
+    },
+    {
+      "id": "explore-06-defined-name",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "349edfbe088cac39ccef838019c66fcdfb9f69c88fec974c0d0a917e2f9b54ca",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13993
+    },
+    {
+      "id": "explore-07-array-formula",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 1,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 1,
+      "independentDivergence": true,
+      "fingerprint": "16c58d1ac2bb732cd5d7ed77ea6a5fae8d4e4704b4b4d8972ec3a5a4725f9e59",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13603
+    },
+    {
+      "id": "explore-08-phpspreadsheet-1281-decimal-comma",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": true,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 1,
+      "materialDifferenceCount": 4,
+      "libreOfficeMaterialDifferenceCount": 1,
+      "independentMaterialDifferenceCount": 3,
+      "independentDivergence": true,
+      "fingerprint": "c387d44bfee92a442c86cdd8cbe10941ff12ba4ca9bc0736210ef900fabc69cc",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13340
+    },
+    {
+      "id": "explore-09-chart-roundtrip",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "c2c1523920823bac2fe9cfb1b9d3c8d00a91cf08547f30234b6ce027143b48b5",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13301
+    },
+    {
+      "id": "explore-10-merged-roundtrip",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "e6d6804dbcfcf9cdcf9509bacc3818737a07f1720f934dc12fc7e9b03ea15098",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 12988
+    },
+    {
+      "id": "explore-11-exceljs-1325-header-footer",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-2",
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 1,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 1,
+      "independentDivergence": true,
+      "fingerprint": "66034c4e7f63f7c57e16a34a137c9c986e7610e2a5b1381cdbd1085d21447ab6",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13064
+    },
+    {
+      "id": "explore-12-exceljs-685-sheet-protection",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-2",
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 1,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 1,
+      "independentDivergence": true,
+      "fingerprint": "ae02a0dffe506310b9881a04bc44f356993979c81617a47b5e63d24faaef2485",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13399
+    },
+    {
+      "id": "explore-13-exceljs-2069-long-data-validation",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-2",
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "ad80202c22afb5f99148565101839a2c8bfdb067180cd6889aec7eb15d107983",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 11834
+    },
+    {
+      "id": "explore-14-synthetic-page-breaks",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-2",
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "884d91af506f317108c48fe60ac7631c5d1bfc9e0cfb51434b58c06cb723c8f1",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 11914
+    },
+    {
+      "id": "explore-15-synthetic-ignored-errors",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-2",
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 2,
+      "libreOfficeMaterialDifferenceCount": 1,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "15b25df555d3c8bd87c9f60e563b96982ce86bf76f2a8a963e5224ce01e1d7ee",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 14287
+    },
+    {
+      "id": "explore-16-synthetic-row-outline",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-2",
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "7875a66d1908fb21771ee3fcd9d0bd9fa091f71dc2fc6092ddfcd81f39b1ca27",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 23564
+    },
+    {
+      "id": "explore-17-exceljs-very-hidden-sheet",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 2,
+      "libreOfficeMaterialDifferenceCount": 1,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "e495b4cb625e8c7dffb67559e5dea6063cd2ce519262c5677b391d4a3d78eba3",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 15453
+    },
+    {
+      "id": "explore-18-openxml-workbook-protection",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 2,
+      "libreOfficeMaterialDifferenceCount": 1,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "cf15c95dcc84f1e29ad247db1f43cba3a225bd20f1e3e178090a4692f4f4fb54",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 15797
+    },
+    {
+      "id": "explore-19-openxml-custom-property",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 1,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 1,
+      "independentDivergence": true,
+      "fingerprint": "4e2a3161ec3491822dd040004bc122288de54f8d72c943b3ee42b945cda11595",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 16779
+    },
+    {
+      "id": "explore-20-exceljs-print-area",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 1,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 1,
+      "independentDivergence": true,
+      "fingerprint": "26e06291ba1bfe93355c2e73c75f8d4d73837ce841e9c19254917b1f9f5571f9",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 17840
+    },
+    {
+      "id": "explore-21-exceljs-landscape-page-setup",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "f44b752af8b54c83c428277d3a17fc240510de97721a3467ba56e3df19b5100f",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 18531
+    },
+    {
+      "id": "explore-22-exceljs-frozen-pane",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "23b51c874f23d5bd397278212e089a58ed8624f840e4d6a27b6f9f2f3b9ecfcd",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 16307
+    },
+    {
+      "id": "explore-23-exceljs-legacy-note",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "226fcdc1c1c2a9447c172415250b254ed31518eea27ef3c0c8c10e863b1e0bef",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 16496
+    },
+    {
+      "id": "explore-24-excel-aggregate-formula",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 6,
+      "libreOfficeMaterialDifferenceCount": 3,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "723bd7fc3d4c85d03bbd4d9f687984f64510f018f13dd23effc01f18224b53e9",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 19223
+    },
+    {
+      "id": "explore-25-excel-filterxml-formula",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 4,
+      "libreOfficeMaterialDifferenceCount": 2,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "59c10fa419dca3980d370997a37dfc24fbbb34bf4485e4cb6bf419a6fcbfca74",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 17219
+    },
+    {
+      "id": "explore-26-excel-rri-formula",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 3,
+      "libreOfficeMaterialDifferenceCount": 2,
+      "independentMaterialDifferenceCount": 2,
+      "independentDivergence": true,
+      "fingerprint": "f3c8d875396fd63500afd2fb07f861bb8c404bad9b709f9489b9230b9fb6c26c",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 17417
+    },
+    {
+      "id": "explore-27-excel-pduration-formula",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 3,
+      "libreOfficeMaterialDifferenceCount": 2,
+      "independentMaterialDifferenceCount": 2,
+      "independentDivergence": true,
+      "fingerprint": "49119bc49e7bfc3769f53ec35f05af1c30c5ecc28c6eb13b9a41092bceb3612e",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 19013
+    },
+    {
+      "id": "explore-28-openxml-manual-calculation",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "publicSilentValueCandidate": false,
+      "status": "fail",
+      "detected": true,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 1,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "0abaafc6e0f0759488bfe28dc46754481899a3b16041bfdbcbf14d4d5b0e5c14",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 16103
+    },
+    {
+      "id": "good-01-basic-arithmetic",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 15232
+    },
+    {
+      "id": "good-02-multi-row",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "45fa71c2b74141cbc7fdd24cea4f9264ccc365af7ef4c68b4f5469ff248bdfae",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 17195
+    },
+    {
+      "id": "good-03-dates",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "b94cda3c6eaef9350db5fae8c99884a58e95595c4412b4cdd739e98071a2342d",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 14678
+    },
+    {
+      "id": "good-04-percentages",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "8400289c8a914e9d498ba035d6c09e4eb6c16b0215f4710615b8acf0e80a8798",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 16572
+    },
+    {
+      "id": "good-05-negative-values",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "b12f881503af352b66d6a3e101a2298156efc93bb55401b9be02be4716153454",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 20454
+    },
+    {
+      "id": "good-06-unicode-text",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "e4336d37dbf8c45ba32fe989893cf3bd0186b53d29681a6bcc909393dbeca65f",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 14450
+    },
+    {
+      "id": "good-07-booleans",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "4da89ad0ce84a8b170d614056b3203143f5cdd9b354e1fc79f0f2260e3e34862",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13576
+    },
+    {
+      "id": "good-08-blank-cells",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "3837c8ba5a734739e2d00ba2cf8f15fa6aed0fc7507565019f6d3c22a7c83b1a",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 15665
+    },
+    {
+      "id": "good-09-merged-heading",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "aa05b7544804b3d9f02c4132a24f1416943417279a598d17d78f2681107069c0",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 18802
+    },
+    {
+      "id": "good-10-conditional-format",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "7a2de74cf3f1aed168a5714291492031378ff3a68e1bd091a791d38979070765",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 17723
+    },
+    {
+      "id": "good-11-table",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "cc57c29c7ae79f79379cf83b5d645c27b44a773da78b2cfee4b393da5b6a249a",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 16164
+    },
+    {
+      "id": "good-12-chain-formulas",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "8662a221b3627f947f21f50b09af91512dd6290e81f0d35e50505bf4d7e61781",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 15023
+    },
+    {
+      "id": "good-13-sum-formula",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "d4ee40ae2bb865f078237268b0f070a409360c97a09df7e4d9bf09449ca94ec0",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13867
+    },
+    {
+      "id": "good-14-rounding",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "8cc253ce19276c09fcc93c91a71c4ae8495d4936faa8d63cf742a29fc6f906e1",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 15802
+    },
+    {
+      "id": "good-15-large-numbers",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "5b8257faab1a41d7e079ed248c28e85fe2439481f49b3a328f2cf88455d58e6e",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 15526
+    },
+    {
+      "id": "good-16-small-numbers",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "466c80b52120314bb999bb59e5754b1ea177bc6fad54737deed8775f89b803e1",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 15097
+    },
+    {
+      "id": "good-17-long-labels",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "e3a50e4271f0b7fa3dfc87ba00b6d0dddf11c2ff0f0d995dc9d64a8f97863f00",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 16570
+    },
+    {
+      "id": "good-18-multiple-sheets",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a17b59e834c3ee06d643c7250aa3204135aea5f6dc8db21d519de13251dd1868",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13905
+    },
+    {
+      "id": "good-19-chart",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "6798a4140b36c8553455c977234a233f3d9025036d1a172456302c6a4ef80767",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 14732
+    },
+    {
+      "id": "good-20-image",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "67e4392cbf9329d67c97f35756f63f7575dd4febd9dbbd221c751703e69a473d",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 16294
+    }
+  ],
+  "repeats": [
+    {
+      "id": "good-01-basic-arithmetic-repeat-01",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 16021
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-02",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 14716
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-03",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13498
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-04",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 14998
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-05",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 15620
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-06",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13520
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-07",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13622
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-08",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 14022
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-09",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13561
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-10",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 12266
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-11",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 11960
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-12",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 15251
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-13",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 12939
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-14",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 12448
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-15",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 12957
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-16",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 13704
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-17",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 12508
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-18",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 12826
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-19",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 12934
+    },
+    {
+      "id": "good-01-basic-arithmetic-repeat-20",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "prospectiveRound": null,
+      "publicSilentValueCandidate": false,
+      "status": "pass",
+      "detected": false,
+      "sourceMaterialErrors": 0,
+      "materialDifferenceCount": 0,
+      "libreOfficeMaterialDifferenceCount": 0,
+      "independentMaterialDifferenceCount": 0,
+      "independentDivergence": false,
+      "fingerprint": "a2b8622a79213dac45dccda7768e693b9067aec4f109ba8f2310b95e684f6477",
+      "engines": {
+        "libreoffice": {
+          "status": "available",
+          "version": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+          "releaseChannel": "stable",
+          "outcome": "accepted",
+          "locale": "C",
+          "timezone": "UTC",
+          "endpoint": null,
+          "remoteRetention": null
+        },
+        "google-sheets": {
+          "status": "available",
+          "version": null,
+          "releaseChannel": "unknown",
+          "outcome": "accepted",
+          "locale": "en_US",
+          "timezone": "America/Los_Angeles",
+          "endpoint": "Google Sheets API v4 / Drive API v3",
+          "remoteRetention": "permanently_deleted"
+        }
+      },
+      "engineVersion": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+      "engineReleaseChannel": "stable",
+      "engineOutcome": "accepted",
+      "engineOutcomes": {
+        "libreoffice": "accepted",
+        "google-sheets": "accepted"
+      },
+      "elapsedMs": 12658
+    }
+  ]
+}

@@ -1,0 +1,1248 @@
+{
+  "schemaVersion": 1,
+  "fixtureCount": 68,
+  "fixtures": [
+    {
+      "id": "bad-01-not-a-zip",
+      "file": "corpus/bad-01-not-a-zip.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Non-ZIP bytes with an XLSX extension",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "e3d27aefb31c4c6e6f01dfe9e290e898f9272858c28b3983d2aa6c6cd5362e9a",
+      "sizeBytes": 28
+    },
+    {
+      "id": "bad-02-truncated-zip",
+      "file": "corpus/bad-02-truncated-zip.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Truncated ZIP central directory",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "baed081de541a5b6cbcd4e0351c122c730cd8f7516f082be9f9d95fa7262013c",
+      "sizeBytes": 2059
+    },
+    {
+      "id": "bad-03-missing-content-types",
+      "file": "corpus/bad-03-missing-content-types.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Missing [Content_Types].xml",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "147dd93744688bb44e692d5ff7f620e8cbb415a286978e72fda594d88e9f9878",
+      "sizeBytes": 3683
+    },
+    {
+      "id": "bad-04-missing-workbook",
+      "file": "corpus/bad-04-missing-workbook.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Missing xl/workbook.xml",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "c28da8bd81e8259d358c6dc50c8a41b8e6a77f8a3fe5627b7b64d210c461facf",
+      "sizeBytes": 3781
+    },
+    {
+      "id": "bad-05-missing-workbook-rels",
+      "file": "corpus/bad-05-missing-workbook-rels.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Missing workbook relationships",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "8be22948bdf5fb64173f29041205aae98ae80c6172d71410326d5892eb42de04",
+      "sizeBytes": 3675
+    },
+    {
+      "id": "bad-06-missing-worksheet",
+      "file": "corpus/bad-06-missing-worksheet.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Workbook points to a missing worksheet part",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "dc56bd3b8cfbe0a220e596be7a4c1c42487a755291d2639355aded12b2ae5caf",
+      "sizeBytes": 3256
+    },
+    {
+      "id": "bad-07-missing-styles",
+      "file": "corpus/bad-07-missing-styles.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Workbook relationship points to missing styles",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "6605cbcb7b0276f96eac37014bac3f172556ae527f0c7b02b18876aa0a722d9e",
+      "sizeBytes": 3338
+    },
+    {
+      "id": "bad-08-missing-theme",
+      "file": "corpus/bad-08-missing-theme.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Workbook relationship points to missing theme",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "89515b7663d48169ff0e329379615f5a04d13e5153dadf6fda065c77225519b2",
+      "sizeBytes": 3164
+    },
+    {
+      "id": "bad-09-malformed-workbook-xml",
+      "file": "corpus/bad-09-malformed-workbook-xml.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Malformed workbook XML",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "a6aa6e4347c913f7ccdf522c31c08d451b7582186f2c778053ea4e42bb8fb124",
+      "sizeBytes": 4070
+    },
+    {
+      "id": "bad-10-malformed-worksheet-xml",
+      "file": "corpus/bad-10-malformed-worksheet-xml.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Malformed worksheet XML",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "5829964f984dc6f67989bee33a89f3a2fd6de69c44fab8569972b50d107a384b",
+      "sizeBytes": 4070
+    },
+    {
+      "id": "bad-11-broken-relationship-target",
+      "file": "corpus/bad-11-broken-relationship-target.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Worksheet relationship target does not exist",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "7e29c832360ab063f59bcd6340bdc3deead60d1257d57132b01f8721c1bd5b61",
+      "sizeBytes": 4068
+    },
+    {
+      "id": "bad-12-missing-sheet-relationship",
+      "file": "corpus/bad-12-missing-sheet-relationship.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Sheet uses an unknown relationship id",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "55508c6ec31de11f3c624ef3ab3bb0d2726b873ade39cb54229af7840797ea49",
+      "sizeBytes": 4067
+    },
+    {
+      "id": "bad-13-invalid-cell-reference",
+      "file": "corpus/bad-13-invalid-cell-reference.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Cell has an invalid A1 reference",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "3626e397c3ff203e2ec5a02dd261ed73f2b332f28d1e55b00bdc5ae68e6c2b62",
+      "sizeBytes": 4079
+    },
+    {
+      "id": "bad-14-duplicate-sheet-name",
+      "file": "corpus/bad-14-duplicate-sheet-name.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Workbook contains duplicate case-insensitive sheet names",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "b795c116019e2e5ec86bc2131898da52b17a37c2b2a5e722db88d790fdcff04e",
+      "sizeBytes": 4101
+    },
+    {
+      "id": "bad-15-stale-cache-d4",
+      "file": "corpus/bad-15-stale-cache-d4.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": true,
+      "semanticDivergence": true,
+      "description": "Formula cache says 999 while B4*C4 recalculates to 75",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "34a0ab2be80acb98e72cbe41040bc81d51f1176ae91813d794aa9712e0ba7b81",
+      "sizeBytes": 4078
+    },
+    {
+      "id": "bad-16-stale-cache-d5",
+      "file": "corpus/bad-16-stale-cache-d5.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": true,
+      "semanticDivergence": true,
+      "description": "Formula cache says -123 while B5*C5 recalculates to 87",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "a46b65f0f19a1726953c1d7e9849db275763e00eedc24ae7299817ce34a2b16e",
+      "sizeBytes": 4074
+    },
+    {
+      "id": "bad-17-stale-cache-d6",
+      "file": "corpus/bad-17-stale-cache-d6.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": true,
+      "semanticDivergence": true,
+      "description": "Formula cache says 0 while B6*C6 recalculates to -9",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "f351ed0b57c8870f72d1c88a70ad12a5802d99be48aacd26df79fd0781003ec8",
+      "sizeBytes": 4075
+    },
+    {
+      "id": "bad-18-stale-cache-d7",
+      "file": "corpus/bad-18-stale-cache-d7.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": true,
+      "semanticDivergence": true,
+      "description": "Formula cache says 1 while SUM(D4:D6) recalculates to 153",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "c00f683128eefca55e8cd6f7b5ed7f7a924282a71a9a003b231423eeacd2aeb7",
+      "sizeBytes": 4075
+    },
+    {
+      "id": "bad-19-stale-cache-g4",
+      "file": "corpus/bad-19-stale-cache-g4.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": true,
+      "semanticDivergence": true,
+      "description": "Formula cache says 240 while F4*2 recalculates to 24",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "b4fdd312bf54ebcca421c8a9184cfab75f2269acb852e4c9b49d40812264a0c5",
+      "sizeBytes": 4075
+    },
+    {
+      "id": "bad-20-stale-cache-h4",
+      "file": "corpus/bad-20-stale-cache-h4.xlsx",
+      "classification": "known-bad",
+      "expectedMaterialFailure": true,
+      "packageWellFormed": true,
+      "semanticDivergence": true,
+      "description": "Formula cache says 0 while G4+1 recalculates to 25",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "44d08e67d397ca894574d49805b72b4b14af3d355c49b00089be5690c87c9ad2",
+      "sizeBytes": 4073
+    },
+    {
+      "id": "explore-01-exceljs-2778-autofilter",
+      "file": "corpus/explore-01-exceljs-2778-autofilter.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "https://github.com/exceljs/exceljs/issues/2778"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "21464f8f8569aefa5018927322599d6095fcc06fe5384242f9db4668ad6aaf0c",
+      "sizeBytes": 4876
+    },
+    {
+      "id": "explore-02-exceljs-2896-image-anchor",
+      "file": "corpus/explore-02-exceljs-2896-image-anchor.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "https://github.com/exceljs/exceljs/issues/2896"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "7e5cc44ed91ee0ed2333544a26ba77382b038fd5b70185abd2b30a6f2cbea160",
+      "sizeBytes": 5544
+    },
+    {
+      "id": "explore-03-npoi-1801-open-control",
+      "file": "corpus/explore-03-npoi-1801-open-control.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "https://github.com/nissl-lab/npoi/issues/1801"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "5277e969a581b5889448ee10f3fe6b68c0be8ec1ee77f311e4b647f151722112",
+      "sizeBytes": 4075
+    },
+    {
+      "id": "explore-04-external-link-policy",
+      "file": "corpus/explore-04-external-link-policy.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "96b83749f029799fdcc7e98e534b3c56919ab5fb9813bb7653ed7b0a4cc80298",
+      "sizeBytes": 4083
+    },
+    {
+      "id": "explore-05-volatile-policy",
+      "file": "corpus/explore-05-volatile-policy.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "706b58a7e51b9d5fdbe31dc58d22e43bb25e8aa6ec6133554bdf2a52e2dea355",
+      "sizeBytes": 4076
+    },
+    {
+      "id": "explore-06-defined-name",
+      "file": "corpus/explore-06-defined-name.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "6a935448fca2c476b2cbc351f6ec89b72bee1e25fd8762547062bfc8723e8581",
+      "sizeBytes": 4113
+    },
+    {
+      "id": "explore-07-array-formula",
+      "file": "corpus/explore-07-array-formula.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "4a2fbf31e12385f15834db7f77fe6ba1f760c2f04d3757c622bc1c6ced7b3f8f",
+      "sizeBytes": 4086
+    },
+    {
+      "id": "explore-08-phpspreadsheet-1281-decimal-comma",
+      "file": "corpus/explore-08-phpspreadsheet-1281-decimal-comma.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": false,
+      "semanticDivergence": false,
+      "description": "Public issue-derived decimal-comma corruption: numeric 1.1 serialized as 1.1.0; report says LibreOffice repairs it while Google Sheets silently drops it",
+      "provenance": [
+        "https://github.com/PHPOffice/PhpSpreadsheet/issues/1281"
+      ],
+      "publicSilentValueCandidate": true,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "497d9303a4ab1941d122e77bda93d210ef5c8ab9148390e6ca3219bb6190996b",
+      "sizeBytes": 4075
+    },
+    {
+      "id": "explore-09-chart-roundtrip",
+      "file": "corpus/explore-09-chart-roundtrip.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "d35fbd90ac1c0f663176b9fafdbba5a95c9b2f50d58a765723387bc3067a0b72",
+      "sizeBytes": 6132
+    },
+    {
+      "id": "explore-10-merged-roundtrip",
+      "file": "corpus/explore-10-merged-roundtrip.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "373b9a8c067d5542a540bb386c11da593bfbc83cc4ab0584412d25fb0c59acf0",
+      "sizeBytes": 4127
+    },
+    {
+      "id": "explore-11-exceljs-1325-header-footer",
+      "file": "corpus/explore-11-exceljs-1325-header-footer.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Public issue-derived first/odd header and footer preservation edge",
+      "provenance": [
+        "https://github.com/exceljs/exceljs/issues/1325"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-2",
+      "sha256": "dcae75dfb45b7fd16eef4bd6e32ae486f97ad056817b5ab4a451f03694170c31",
+      "sizeBytes": 4192
+    },
+    {
+      "id": "explore-12-exceljs-685-sheet-protection",
+      "file": "corpus/explore-12-exceljs-685-sheet-protection.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Public issue-derived worksheet protection preservation edge",
+      "provenance": [
+        "https://github.com/exceljs/exceljs/issues/685"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-2",
+      "sha256": "94b3a7152c4c59ac39d8a47963767fcde25fbb15964c092c29bbfabc48ed194e",
+      "sizeBytes": 4122
+    },
+    {
+      "id": "explore-13-exceljs-2069-long-data-validation",
+      "file": "corpus/explore-13-exceljs-2069-long-data-validation.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Public discussion-derived inline list data validation exceeding the reported 1024-character edge",
+      "provenance": [
+        "https://github.com/exceljs/exceljs/discussions/2069"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-2",
+      "sha256": "87245d58ef0fcff421ec511e5b2db77bd61e4bad48ceb6cb81a09125eb892c0a",
+      "sizeBytes": 4527
+    },
+    {
+      "id": "explore-14-synthetic-page-breaks",
+      "file": "corpus/explore-14-synthetic-page-breaks.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic manual row and column page-break preservation edge",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-2",
+      "sha256": "dc68f0858948e7160e532ff8edc5fff5d09990ce2110d83c77917d7c5b93153e",
+      "sizeBytes": 4142
+    },
+    {
+      "id": "explore-15-synthetic-ignored-errors",
+      "file": "corpus/explore-15-synthetic-ignored-errors.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic ignored-error metadata preservation edge",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-2",
+      "sha256": "f5f434af7b57c4ddc18386c675db0dcc3abd6d40b501509fe1b99b3b70afb8a6",
+      "sizeBytes": 4114
+    },
+    {
+      "id": "explore-16-synthetic-row-outline",
+      "file": "corpus/explore-16-synthetic-row-outline.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic hidden outlined-row preservation edge",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-2",
+      "sha256": "c9e107d5edcc8e801f014a81ef0639b30267fc61391f59947edcbeeb2eea8347",
+      "sizeBytes": 4089
+    },
+    {
+      "id": "explore-17-exceljs-very-hidden-sheet",
+      "file": "corpus/explore-17-exceljs-very-hidden-sheet.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "ExcelJS-documented very-hidden worksheet state preservation edge",
+      "provenance": [
+        "https://github.com/exceljs/exceljs#worksheet-state"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "sha256": "3b381d517648b7fd59d662048c7a207454e8c6548076b9998d955b56820cfb45",
+      "sizeBytes": 4629
+    },
+    {
+      "id": "explore-18-openxml-workbook-protection",
+      "file": "corpus/explore-18-openxml-workbook-protection.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Open XML workbook-structure protection preservation edge",
+      "provenance": [
+        "https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.workbook.workbookprotection"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "sha256": "5f4587e4290c036fe597b59d46be7e79a4fe013787cdd1bd3157bf647d1f2c3e",
+      "sizeBytes": 4106
+    },
+    {
+      "id": "explore-19-openxml-custom-property",
+      "file": "corpus/explore-19-openxml-custom-property.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Open XML custom document-property preservation edge",
+      "provenance": [
+        "https://learn.microsoft.com/en-us/office/dev/add-ins/excel/excel-add-ins-workbooks#access-document-properties"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "sha256": "dde8c0def1b9e97ada6cc4e53863be0694966b37303bf5cbedbf95753c2d5c74",
+      "sizeBytes": 4478
+    },
+    {
+      "id": "explore-20-exceljs-print-area",
+      "file": "corpus/explore-20-exceljs-print-area.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "ExcelJS-documented print-area defined-name preservation edge",
+      "provenance": [
+        "https://github.com/exceljs/exceljs#page-setup"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "sha256": "bfdbd9bb141751d4742469e992fc70cb7effdadaa47cd61f787e55f47e6bfae2",
+      "sizeBytes": 4135
+    },
+    {
+      "id": "explore-21-exceljs-landscape-page-setup",
+      "file": "corpus/explore-21-exceljs-landscape-page-setup.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "ExcelJS-documented landscape page-setup preservation edge",
+      "provenance": [
+        "https://github.com/exceljs/exceljs#page-setup"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "sha256": "328495a4324389d86c153f37bd673b6537aa4dcbdac3cf792b62612aaa59b5af",
+      "sizeBytes": 4119
+    },
+    {
+      "id": "explore-22-exceljs-frozen-pane",
+      "file": "corpus/explore-22-exceljs-frozen-pane.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "ExcelJS-documented frozen-pane preservation edge",
+      "provenance": [
+        "https://github.com/exceljs/exceljs#frozen-views"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "sha256": "e91ac56fcee6c46cf7784fc161449126a336f7b7f7e83c631989fa1a0422cfc4",
+      "sizeBytes": 4149
+    },
+    {
+      "id": "explore-23-exceljs-legacy-note",
+      "file": "corpus/explore-23-exceljs-legacy-note.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "ExcelJS-documented legacy cell-note preservation edge",
+      "provenance": [
+        "https://github.com/exceljs/exceljs#cell-comments"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "sha256": "9c2d274f9ae02656df403d0267e927e7535114318197ff818dd5afd88437dfee",
+      "sizeBytes": 5432
+    },
+    {
+      "id": "explore-24-excel-aggregate-formula",
+      "file": "corpus/explore-24-excel-aggregate-formula.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Microsoft-documented AGGREGATE formula compatibility edge",
+      "provenance": [
+        "https://support.microsoft.com/en-us/excel/aggregate-function"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "sha256": "2eef5821de05da0cbd29a910d0938ffeb3808548615ef70559affbf6278e15eb",
+      "sizeBytes": 4088
+    },
+    {
+      "id": "explore-25-excel-filterxml-formula",
+      "file": "corpus/explore-25-excel-filterxml-formula.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Microsoft-documented FILTERXML formula compatibility edge",
+      "provenance": [
+        "https://support.microsoft.com/en-us/excel/filterxml-function"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "sha256": "cd6a5a6ee10c6f34892789ca4a3b6345f30716972fc23a63850c107bfa2bb58f",
+      "sizeBytes": 4114
+    },
+    {
+      "id": "explore-26-excel-rri-formula",
+      "file": "corpus/explore-26-excel-rri-formula.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Microsoft-documented RRI formula compatibility edge",
+      "provenance": [
+        "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "sha256": "2d3c961244283881a2aac2e9dcd0c28bf7c9e7d09911ac972643092266176d86",
+      "sizeBytes": 4095
+    },
+    {
+      "id": "explore-27-excel-pduration-formula",
+      "file": "corpus/explore-27-excel-pduration-formula.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Microsoft-documented PDURATION formula compatibility edge",
+      "provenance": [
+        "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "sha256": "6c5bad4765176d25fe526185cf5e3d202638bde2567a6be70cae1da39156e49a",
+      "sizeBytes": 4101
+    },
+    {
+      "id": "explore-28-openxml-manual-calculation",
+      "file": "corpus/explore-28-openxml-manual-calculation.xlsx",
+      "classification": "exploratory",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic manual-calculation-mode preservation edge",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "prospectiveRound": "followup-2026-07-15-round-3",
+      "sha256": "f39f34bd012332ad22e5725dc9b29827e33ed9b708f5037e0508d68d714e6c58",
+      "sizeBytes": 4118
+    },
+    {
+      "id": "good-01-basic-arithmetic",
+      "file": "corpus/good-01-basic-arithmetic.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Simple multiplication and aggregation",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "ff751ed35af485027dc59edda774616c7defa8a6ca0edb911bd5cb6a8360b9f9",
+      "sizeBytes": 4060
+    },
+    {
+      "id": "good-02-multi-row",
+      "file": "corpus/good-02-multi-row.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "ac2277ce00d3adf18187c341e5eb261636f6646a2417d40f0b93fde5b93a7463",
+      "sizeBytes": 4056
+    },
+    {
+      "id": "good-03-dates",
+      "file": "corpus/good-03-dates.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Typed dates with explicit invariant formats",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "c2505cc46ca1736fc019565b111738e6b9d170ff9a29109a2c608efe4e448200",
+      "sizeBytes": 4145
+    },
+    {
+      "id": "good-04-percentages",
+      "file": "corpus/good-04-percentages.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "b8d20531eaf09d5effd84783665fd50de72a909664bef950de1770f8a116552d",
+      "sizeBytes": 4130
+    },
+    {
+      "id": "good-05-negative-values",
+      "file": "corpus/good-05-negative-values.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "fe762c6cce5b6859d160ef077c212b857dd680cb35e34bfb879996b6d5f8c00b",
+      "sizeBytes": 4064
+    },
+    {
+      "id": "good-06-unicode-text",
+      "file": "corpus/good-06-unicode-text.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "57b05208ffe2111a64a972b73e26582f42f8b37e522f1d804c1d1b3399cad06e",
+      "sizeBytes": 4128
+    },
+    {
+      "id": "good-07-booleans",
+      "file": "corpus/good-07-booleans.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "c58dce167bd78a9ce00e13294e873091f087e2d00235a9d561e9460d6a83bc3d",
+      "sizeBytes": 4721
+    },
+    {
+      "id": "good-08-blank-cells",
+      "file": "corpus/good-08-blank-cells.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "539d4304cbff140933624ffe389329347f60c0e2543004280282e0e1959cf38f",
+      "sizeBytes": 4109
+    },
+    {
+      "id": "good-09-merged-heading",
+      "file": "corpus/good-09-merged-heading.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "d946ee9f0bc83edbe46b1d458efd4c697fd7e38bdb2042ad69e086794883e642",
+      "sizeBytes": 4114
+    },
+    {
+      "id": "good-10-conditional-format",
+      "file": "corpus/good-10-conditional-format.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Negative-value conditional formatting",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "83323566c9e87f348a15b36378778ad2bc205f64c92140fc7014008a48a127a3",
+      "sizeBytes": 4179
+    },
+    {
+      "id": "good-11-table",
+      "file": "corpus/good-11-table.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Named structured table",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "24eb068dd77aff6bd13d5061696d1f80ef39a43fe713d20670b4070c16b42cf7",
+      "sizeBytes": 4863
+    },
+    {
+      "id": "good-12-chain-formulas",
+      "file": "corpus/good-12-chain-formulas.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "6ea3221a987e2f393ad7259f690fdae940332a33bb43b0e89e7491e1293f1250",
+      "sizeBytes": 4126
+    },
+    {
+      "id": "good-13-sum-formula",
+      "file": "corpus/good-13-sum-formula.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "53e954b8c63a9c1d208ab5a47ddf443f1f02b13d1326d384d64953552be2c797",
+      "sizeBytes": 4125
+    },
+    {
+      "id": "good-14-rounding",
+      "file": "corpus/good-14-rounding.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "1fc0c28d6ce005d5f979e7ce7b7554eb82f2f6acde49779c0c38c7e2b0b159b1",
+      "sizeBytes": 4124
+    },
+    {
+      "id": "good-15-large-numbers",
+      "file": "corpus/good-15-large-numbers.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "ed6758aaa808237a88ec60241bff1597f2771689e65162402e600512110ad8d0",
+      "sizeBytes": 4100
+    },
+    {
+      "id": "good-16-small-numbers",
+      "file": "corpus/good-16-small-numbers.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "d3ff6ed01858191cfbbe0fe74e1344281d80d3536ebdb504a67533d496e02c5b",
+      "sizeBytes": 4098
+    },
+    {
+      "id": "good-17-long-labels",
+      "file": "corpus/good-17-long-labels.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "dc4355eda3d204c2e9d7455571e4f66bdc1ba97730970d2984eaef56bb3636d4",
+      "sizeBytes": 4178
+    },
+    {
+      "id": "good-18-multiple-sheets",
+      "file": "corpus/good-18-multiple-sheets.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Synthetic coverage fixture",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "682e2243f654b20bbcf484d1c2d22527080bfd7e23a6fa7eb4134c454964d2fa",
+      "sizeBytes": 4654
+    },
+    {
+      "id": "good-19-chart",
+      "file": "corpus/good-19-chart.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Embedded chart with worksheet-backed data",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "fd1050830d13f9c11e9fd416a913c8d5cec0a8a6e8966d1bdf3b66203f05e111",
+      "sizeBytes": 6128
+    },
+    {
+      "id": "good-20-image",
+      "file": "corpus/good-20-image.xlsx",
+      "classification": "known-good",
+      "expectedMaterialFailure": false,
+      "packageWellFormed": true,
+      "semanticDivergence": false,
+      "description": "Embedded raster drawing",
+      "provenance": [
+        "synthetic: authored for SheetParity"
+      ],
+      "publicSilentValueCandidate": false,
+      "publicSilentValueFixture": false,
+      "license": "CC0-1.0",
+      "copiedThirdPartyBytes": false,
+      "sha256": "656f2c3abf2811397594a413f1ac61c3cce8ef876c25810fa47a3bfe308e490f",
+      "sizeBytes": 5523
+    }
+  ]
+}

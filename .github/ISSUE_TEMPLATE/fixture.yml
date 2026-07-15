@@ -1,0 +1,55 @@
+name: Compatibility fixture
+description: Submit a minimized, redistributable XLSX compatibility case.
+title: "[fixture] "
+labels: [fixture]
+body:
+  - type: markdown
+    attributes:
+      value: Do not upload customer, personal, proprietary, or credential-bearing workbooks. Synthetic reproductions are preferred.
+  - type: input
+    id: producer
+    attributes:
+      label: Producer and version
+      description: Library or application that generated the XLSX.
+      placeholder: exceljs 4.4.0
+    validations:
+      required: true
+  - type: textarea
+    id: engines
+    attributes:
+      label: Engine observations
+      description: Exact engine names, versions, and observed outcomes.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected versus actual
+      description: Include exact sheet/cell/object locations where possible.
+    validations:
+      required: true
+  - type: input
+    id: provenance
+    attributes:
+      label: Public provenance URL
+      description: Link to an issue or specification when applicable.
+  - type: dropdown
+    id: license
+    attributes:
+      label: Fixture license
+      options:
+        - CC0-1.0
+        - MIT
+        - Apache-2.0
+        - I cannot grant redistribution rights
+    validations:
+      required: true
+  - type: checkboxes
+    id: safe
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: The fixture contains no private, customer, personal, credential, or proprietary data.
+          required: true
+        - label: I have the right to redistribute the fixture under the selected license.
+          required: true

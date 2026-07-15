@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "round": "followup-2026-07-15-round-3",
+  "phase": "after_targeted_prospective_execution_before_full_matrix",
+  "issues": [
+    "LibreOffice emitted a workbookProtection element whose lock flags were all disabled; element presence alone was not active protection.",
+    "Google exported explicit landscape metadata on source workbooks that did not declare landscape orientation; symmetric pairwise additions were incidental to the prospective feature under test."
+  ],
+  "corrections": [
+    "Treat workbook protection as present only when lockStructure, lockWindows, or lockRevision is truthy.",
+    "For pairwise structural comparisons, qualify engine-only feature additions as material only when the frozen source declared that feature; formula, value, error, loss, and source-declared preservation differences remain material."
+  ],
+  "direction": "narrows_detection_and_removes_incidental_false_positives",
+  "populationChanged": false,
+  "thresholdsChanged": false,
+  "manifestChanged": false,
+  "manifestSha256": "f4b01e5fc08a0345e050b21ae921986becb1d69155367ef92c6f8f964f1fbd2b",
+  "decisionRule": "Discard the pre-correction targeted outputs, rerun all twelve frozen fixtures, and only then run the complete population."
+}

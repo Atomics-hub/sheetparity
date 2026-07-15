@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "round": "followup-2026-07-15-round-3",
+  "frozenBeforeEngineExecution": true,
+  "manifestSha256": "f4b01e5fc08a0345e050b21ae921986becb1d69155367ef92c6f8f964f1fbd2b",
+  "population": {
+    "knownGood": 20,
+    "knownBad": 20,
+    "exploratory": 28,
+    "repeats": 20,
+    "fixtureCount": 68
+  },
+  "thresholds": {
+    "knownBadDetected": 16,
+    "knownGoodFalsePositiveRate": "<10%",
+    "repeatedRunStability": ">=19/20",
+    "packageValidLocalSemanticDivergences": 5,
+    "independentRealEngineDivergences": 5,
+    "publicSilentValueFixture": 1,
+    "remoteCleanupFailures": 0
+  },
+  "roundThreeFixtures": [
+    { "id": "explore-17-exceljs-very-hidden-sheet", "sha256": "3b381d517648b7fd59d662048c7a207454e8c6548076b9998d955b56820cfb45" },
+    { "id": "explore-18-openxml-workbook-protection", "sha256": "5f4587e4290c036fe597b59d46be7e79a4fe013787cdd1bd3157bf647d1f2c3e" },
+    { "id": "explore-19-openxml-custom-property", "sha256": "dde8c0def1b9e97ada6cc4e53863be0694966b37303bf5cbedbf95753c2d5c74" },
+    { "id": "explore-20-exceljs-print-area", "sha256": "bfdbd9bb141751d4742469e992fc70cb7effdadaa47cd61f787e55f47e6bfae2" },
+    { "id": "explore-21-exceljs-landscape-page-setup", "sha256": "328495a4324389d86c153f37bd673b6537aa4dcbdac3cf792b62612aaa59b5af" },
+    { "id": "explore-22-exceljs-frozen-pane", "sha256": "e91ac56fcee6c46cf7784fc161449126a336f7b7f7e83c631989fa1a0422cfc4" },
+    { "id": "explore-23-exceljs-legacy-note", "sha256": "9c2d274f9ae02656df403d0267e927e7535114318197ff818dd5afd88437dfee" },
+    { "id": "explore-24-excel-aggregate-formula", "sha256": "2eef5821de05da0cbd29a910d0938ffeb3808548615ef70559affbf6278e15eb" },
+    { "id": "explore-25-excel-filterxml-formula", "sha256": "cd6a5a6ee10c6f34892789ca4a3b6345f30716972fc23a63850c107bfa2bb58f" },
+    { "id": "explore-26-excel-rri-formula", "sha256": "2d3c961244283881a2aac2e9dcd0c28bf7c9e7d09911ac972643092266176d86" },
+    { "id": "explore-27-excel-pduration-formula", "sha256": "6c5bad4765176d25fe526185cf5e3d202638bde2567a6be70cae1da39156e49a" },
+    { "id": "explore-28-openxml-manual-calculation", "sha256": "f39f34bd012332ad22e5725dc9b29827e33ed9b708f5037e0508d68d714e6c58" }
+  ],
+  "decisionRule": "Pass only if every frozen threshold passes and qualifying fixtures survive individual evidence review; otherwise keep private."
+}

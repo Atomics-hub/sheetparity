@@ -1,0 +1,54 @@
+{
+  "name": "sheetparity",
+  "version": "0.1.0-alpha.1",
+  "description": "CI for generated XLSX files: static package evidence plus real spreadsheet-engine round trips.",
+  "type": "module",
+  "bin": {
+    "sheetparity": "./bin/sheetparity.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./schema": "./schemas/result.schema.json"
+  },
+  "files": [
+    "bin",
+    "docs",
+    "scripts/google-oauth-authorize.mjs",
+    "src",
+    "schemas",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "lint": "node --check bin/sheetparity.js && find src scripts test \\( -name '*.js' -o -name '*.mjs' \\) -print0 | xargs -0 -n1 node --check",
+    "fixtures": "node scripts/mutate-fixtures.mjs",
+    "falsify": "node scripts/run-falsification.mjs",
+    "demo": "node bin/sheetparity.js test fixtures/corpus/bad-15-stale-cache-d4.xlsx --matrix libreoffice --json outputs/demo/result.json --html outputs/demo/report.html",
+    "prepack": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "xlsx",
+    "spreadsheet",
+    "libreoffice",
+    "google-sheets",
+    "ci",
+    "testing",
+    "ooxml"
+  ],
+  "license": "MIT",
+  "packageManager": "pnpm@11.7.0",
+  "dependencies": {
+    "fast-xml-parser": "5.10.0",
+    "fflate": "0.8.3"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "yaml": "2.9.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "round": "followup-2026-07-15-round-2",
+  "recordedAfterScorecard": true,
+  "scorecardPath": "outputs/falsification-round-2/scorecard.json",
+  "observedGate": "1/20",
+  "semanticRunStatus": "20/20 pass",
+  "rootCause": "The stable fingerprint included sha256 and sizeBytes from the Google XLSX round-trip proof diagnostic. Google exports were semantically identical but ZIP bytes were not deterministic between exports.",
+  "correctionForFutureRounds": "Exclude only sha256 and sizeBytes from the non-material xlsx_roundtrip_export_inspected diagnostic in stable fingerprints. Keep the diagnostic and proof metadata in saved results.",
+  "roundTwoVerdictChanged": false,
+  "roundTwoVerdict": "fail",
+  "requiredRetest": "A newly frozen round must rerun stability after the correction."
+}
